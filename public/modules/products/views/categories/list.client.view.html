@@ -1,0 +1,17 @@
+<section data-ng-controller="CategoriesController" data-ng-init="findOne()">
+	<div class="m-hero banner" id="hero">
+		<span class="overlay"></span>
+		<span class="image banner" style="background-image: url({{category.banner}})">
+		</span>
+	</div>
+
+	<section class="listing">
+		<ul>
+			<li data-ng-repeat="product in category.products">
+				<div data-ng-include="'/modules/products/views/products/_product.client.view.html'"></div>
+			</li>
+		</ul>
+	</section>
+</section>
+<div style="clear:both"></div>
+<div data-ng-include="'/modules/core/views/_footer.client.view.html'"></div>

@@ -1,0 +1,25 @@
+<section class="m-cover" id="cover" style="background-image: url(http://cdn0.vox-cdn.com/uploads/chorus_asset/file/2396648/home-cover-1.0.jpg);">
+  <span class="m-cover__overlay"></span>
+  <div class="m-cover__logo-container container">
+    <img alt="Hipstr Media" src="https://cdn1.vox-cdn.com/uploads/chorus_asset/file/3395222/logos-home.01.0.png">
+  </div>
+</section>
+
+<section data-ng-controller="CategoriesController" data-ng-init="find()">
+	<ul class="m-hero" id="hero" data-ng-repeat="category in categories">
+		<li class="hero hero-0 {{category.name}}">
+			<a href="#!category/{{category.url}}">
+				<header>
+					<span class="icon"></span>
+					<strong class="network">{{category.name}}</strong> <span class="author"></span>
+				</header>
+				<h2>{{category.description}}</h2>
+				<span class="overlay"></span>
+				<span class="image" style="background-image: url({{category.banner}})">
+				</span>
+			</a>
+		</li>
+	</ul>
+</section>
+
+<div data-ng-include="'/modules/core/views/_footer.client.view.html'"></div>

@@ -1,0 +1,16 @@
+<section  data-ng-controller="HeaderController">
+	<div class="logo">
+		<a href=""><img data-ng-click="back()" src="/modules/products/img/logo.png"></a>
+	</div>
+	<div class="favorites" data-ng-mouseenter="hover = true" data-ng-mouseleave="hover = false">
+		<div class="cart" data-ng-class="{show: favoritesCount}">
+			<div class="count">Favorited {{favoritesCount}} products <sub>just sayin'</sub></div>
+			<div class="list" data-ng-class="{show: hover}">
+				<ul>
+					<li data-ng-repeat="favorite in favorites"><a href="#!/product/{{favorite.url}}">{{favorite.name}}</a></li>
+				</ul>
+				<sub>Click to view 'em</sub>
+			</div>
+		</div>
+	</div>
+</div>
